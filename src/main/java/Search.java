@@ -1,3 +1,5 @@
+
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -6,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class TechExerciseServlet
+ * Servlet implementation class Search
  */
-@WebServlet("/TechExerciseServlet")
-public class TechExerciseServlet extends HttpServlet {
+@WebServlet("/Search")
+public class Search extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public TechExerciseServlet() {
+    public Search() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,8 +28,12 @@ public class TechExerciseServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
-		response.getWriter().println("<h1>Successfully inserted! </h1><p>Please click this "
-				+ "<a href=/tech-exercise-Shellberg/Home.html>link</a> to return "
+		response.getWriter().println("<h1>Results:</h1>");
+		response.getWriter().println("<p>Result 1</p> <br/>");
+		response.getWriter().println("<p>Result 2</p> <br/>");
+		
+		response.getWriter().println("<p>Please click this "
+				+ "<a href=/tech-exercise-Shellberg/Search.html>link</a> to return "
 				+ "to the previous page. </p>");
 	}
 
