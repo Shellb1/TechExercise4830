@@ -27,6 +27,10 @@ public class ItemModel {
 	@Column(name = "category")
 	private String category;
 
+	public ItemModel() {
+		
+	}
+	
 	public ItemModel(Integer id, String store, String item, Integer quantity, String category) {
 		this.id = id;
 		this.store = store;
@@ -66,7 +70,7 @@ public class ItemModel {
 		this.item = item;
 	}
 
-	public int getQuantity() {
+	public Integer getQuantity() {
 		return quantity;
 	}
 
@@ -84,7 +88,6 @@ public class ItemModel {
 
 	@Override
 	public String toString() {
-		return "ItemModel [id=" + id + ", store=" + store + ", item=" + item + ", quantity=" + quantity + ", category="
-				+ category + "]";
+		return "" + quantity + " of " + item + " of category " + category + " at store " + store;
 	}
 }

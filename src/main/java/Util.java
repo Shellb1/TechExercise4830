@@ -35,7 +35,7 @@ public class Util {
 
       try {
          tx = session.beginTransaction();
-         List<?> items = session.createQuery("FROM GroceryList").list();
+         List<?> items = session.createQuery("FROM ItemModel").list();
          for (Iterator<?> iterator = items.iterator(); iterator.hasNext();) {
             ItemModel item = (ItemModel) iterator.next();
             resultList.add(item);
@@ -59,7 +59,7 @@ public class Util {
 
       try {
          tx = session.beginTransaction();
-         List<?> items = session.createQuery("FROM GroceryList").list();
+         List<?> items = session.createQuery("FROM ItemModel").list();
          for (Iterator<?> iterator = items.iterator(); iterator.hasNext();) {
             ItemModel item = (ItemModel) iterator.next();
             if (store != null) {
